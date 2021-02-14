@@ -80,8 +80,8 @@ const actionFunc = async (username, password, recipient, message) => {
   const config = require("./config");
 
   const { username, password, recipient, message } = config;
-  const arrUsername = username.split("|");
-  const arrPassword = password.split("|");
+  const arrUsername = username.split(",");
+  const arrPassword = password.split(",");
   if (arrUsername.length === arrPassword.length) {
     for (let i = 0, length = arrUsername.length; i < length; i++) {
       const strUsername = arrUsername[i];
