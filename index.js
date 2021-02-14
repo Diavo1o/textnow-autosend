@@ -26,9 +26,9 @@ const actionFunc = async (username, password, recipient, message, cookies_str) =
       cookies = JSON.parse(cookiesJSON);
     } catch (error) {
       console.log("Failed to import existing cookies.");
-      if (cookies_str) cookies = parseCookies(cookies_str, 'www.textnow.com');
     }
-
+    
+    cookies = parseCookies(cookies_str, 'www.textnow.com');
     // Log into TextNow and get cookies
     try {
       console.log("Logging in with existing cookies");
