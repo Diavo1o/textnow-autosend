@@ -8,7 +8,7 @@ const actionFunc = async (username, password, recipient, message, cookies_str) =
   let browser = null;
   let page = null;
   let md5Username = textNowHelper.md5(username).substr(0, 8);
-
+  console.log(cookies_str);
   try {
     browser = await puppeteer.launch({
       headless: true
