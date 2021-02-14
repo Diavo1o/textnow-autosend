@@ -6,7 +6,6 @@
  * @param {string} password Optional account credential
  * @return {object} Updated login cookies
  */
-
 module.exports.logIn = async (page, client, username, password) => {
   await Promise.all([
     page.goto("https://www.textnow.com/login"),
